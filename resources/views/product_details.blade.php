@@ -1,35 +1,13 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "Product",
-  "name": "{{ $product->name }}",
-  "image": "{{ filter_var($product->image, FILTER_VALIDATE_URL) ? $product->image : asset('storage/' . $product->image) }}",
-  "description": "{{ $product->description }}",
-  "sku": "PROD-{{ $product->id }}",
-  "brand": {
-    "@type": "Brand",
-    "name": "Our SEO Store"
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "{{ url()->current() }}",
-    "priceCurrency": "USD",
-    "price": "{{ $product->price }}",
-    "availability": "https://schema.org/InStock",
-    "itemCondition": "https://schema.org/NewCondition"
-  }
-}
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>{{ $product->meta_title ?? $product->name }}</title>
     <meta name="description" content="{{ $product->meta_description ?? $product->description }}">
 
+    {{-- @include('components.seo-schema', ['product' => $product]) --}}
     <style>
         body { font-family: Tahoma, sans-serif; background: #f9f9f9; padding: 20px; }
         .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
