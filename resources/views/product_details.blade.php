@@ -7,7 +7,8 @@
     <title>{{ $product->meta_title ?? $product->name }}</title>
     <meta name="description" content="{{ $product->meta_description ?? $product->description }}">
 
-    {{-- @include('components.seo-schema', ['product' => $product]) --}}
+   {{-- <x-seo-schema :product="$product" /> --}}
+
     <style>
         body { font-family: Tahoma, sans-serif; background: #f9f9f9; padding: 20px; }
         .container { max-width: 800px; margin: auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
