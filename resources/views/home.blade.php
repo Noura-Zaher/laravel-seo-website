@@ -53,8 +53,8 @@
             <div style="display: flex; align-items: center; gap: 20px; border: 1px solid #ddd; padding: 15px; border-radius: 8px; background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.02);">
 
                 <div style="flex-shrink: 0;">
-                    <img src="https://picsum.photos/seed/product{{ $product->id }}/120/120" alt="{{ $product->name }}" style="width: 120px; height: 120px; object-fit: cover; border-radius: 6px;">
-                </div>
+
+                </div> <img src="https://picsum.photos/seed/product{{ $product->id }}/120/120" alt="{{ $product->name }}" style="width: 120px; height: 120px; object-fit: cover; border-radius: 6px;">
 
 
                 <div style="flex-grow: 1;">

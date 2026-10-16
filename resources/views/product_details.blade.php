@@ -21,6 +21,8 @@
     <div class="container">
         <span class="category">Department: {{ $product->category->name ?? 'public' }}</span>
         <h1>{{ $product->name }}</h1>
+        <img src="https://picsum.photos/seed/product{{ $product->id }}/120/120" alt="{{ $product->name }}" style="width: 120px; height: 120px; object-fit: cover; border-radius: 6px;">
+
         <p class="price">${{ $product->price }}</p>
         <p>{{ $product->description }}</p>
 
